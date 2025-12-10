@@ -1,0 +1,13 @@
+# Ignorer l'environnement virtuel
+venv/
+
+# Ignorer les fichiers générés automatiquement par Python
+__pycache__/
+*.pyc
+
+# Ignorer les fichiers de checkpoints Jupyter
+.ipynb_checkpoints/
+
+# Ignorer les fichiers lourds (ex: vidéos) mais pas data.zip si tu veux le garder
+*.mp4
+*.avi
