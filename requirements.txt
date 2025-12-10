@@ -1,0 +1,11 @@
+numpy
+pandas
+tensorflow
+scikit-learn
+imblearn
+RPi.GPIO
+tflite-runtime
+paho-mqtt
+scipy
+seaborn
+matplotlib
