@@ -61,9 +61,9 @@ Le système repose sur une architecture IoT en couches :
 |--------|-------------|
 | VCC    | 3,3 V       |
 | GND    | GND         |
-| SORTIE | GPIO / ADC  |
-| LO+    | GPIO        |
-| LO-    | GPIO        |
+| SORTIE | GPIO 18     |
+
+
 
 Le capteur AD8232 permet une acquisition ECG précise avec une faible consommation d'énergie, adaptée aux applications médicales IoT.
 
@@ -102,21 +102,21 @@ La communication est assurée via MQTT sécurisé (TLS) avec authentification pa
 ---
 
 ## 📁 Structure du projet  
-.
-├── README.md
 
-├── requirements.txt
+├── README.md          → Documentation complète du projet, explication du système, instructions d'installation et d'utilisation.
 
-├── ecg.py
+├── docs/              → Dossier contenant les images et diagrammes (ex. câblage, captures d'écran du dashboard).
 
-├── ecg.ipynb
+├── .gitignore         → Liste des fichiers et dossiers à ignorer par Git (ex. fichiers temporaires, __pycache__, etc.).
 
-├── ecg_model.tflite
+├── ecg.ipynb          → Notebook Jupyter pour expérimentations et visualisation des données ECG.
 
-└── docs/
-    ├── cablage_ad8232_raspberry.png
-    
-    └── dashboard_thingsboard.png
+├── ecg.py             → Script principal Python pour la lecture des données ECG, traitement, classification et envoi vers ThingsBoard.
+
+├── ecg_model.tflite   → Modèle TensorFlow Lite entraîné pour la classification des battements cardiaques.
+
+└── requirements.txt   → Liste des dépendances Python nécessaires pour exécuter le projet.
+
     
 
 ---
