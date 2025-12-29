@@ -67,7 +67,7 @@ Le système repose sur une architecture IoT en couches :
 
 Le capteur AD8232 permet une acquisition ECG précise avec une faible consommation d'énergie, adaptée aux applications médicales IoT.
 
-![Câblage AD8232 avec Raspberry Pi](docs/Capture d’écran 2025-12-26 230244.png)
+![Câblage AD8232 avec Raspberry Pi](docs/Capture%20d%27%C3%A9cran%202025-12-26%20230244.png)
 
 ---
 
