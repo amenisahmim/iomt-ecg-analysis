@@ -4,7 +4,7 @@
 ---
 
 ## 📌 Introduction
-Ce projet présente une solution IoMT (Internet of Medical Things) dédiée à la surveillance cardiaque en temps réel.  
+Ce projet présente une solution IoMT (Internet of Medical Things) dédiée à la surveillance cardiaque en temps réel.
 
 Le système permet :
 - l'acquisition du signal ECG via le capteur AD8232
@@ -67,19 +67,21 @@ Le système repose sur une architecture IoT en couches :
 
 Le capteur AD8232 permet une acquisition ECG précise avec une faible consommation d'énergie, adaptée aux applications médicales IoT.
 
+![Câblage AD8232 avec Raspberry Pi](docs/cablage_ad8232_raspberry.png)
+
 ---
 
 ## 🤖 Modèle d'Intelligence Artificielle
 Le cœur du système repose sur un CNN 1D (Convolutional Neural Network), particulièrement adapté à l'analyse des signaux temporels ECG.
 
-**🩺 Classes ECG détectées**
+### 🩺 Classes ECG détectées
 - Normale
 - SVEB – Extrasystole supraventriculaire
 - VEB – Extrasystole ventriculaire
 - Fusion Beat
 - Inconnu
 
-Le modèle est réalisé hors ligne puis converti au format TensorFlow Lite pour une exécution rapide et efficace sur Raspberry Pi.
+Le modèle est entraîné hors ligne puis converti au format TensorFlow Lite pour une exécution rapide et efficace sur Raspberry Pi.
 
 **📈 Précision du modèle : ~98 %**
 
@@ -94,18 +96,64 @@ Le modèle est réalisé hors ligne puis converti au format TensorFlow Lite pour
 - Historique des données
 
 La communication est assurée via MQTT sécurisé (TLS) avec authentification par Access Token.
+![Tableau de bord ThingsBoard](docs/dashboard_thingsboard.png)
 
 ---
 
-## 📁 Structure du projet
-```text
+## 📁 Structure du projet  
 .
 ├── README.md
+
 ├── requirements.txt
+
 ├── ecg.py
+
 ├── ecg.ipynb
+
 ├── ecg_model.tflite
-├── docs/
-   ├── cablage_ad8232_raspberry.png
-   └── dashboard_thingsboard.png  
+
+└── docs/
+    ├── cablage_ad8232_raspberry.png
+    
+    └── dashboard_thingsboard.png
+
+---
+
+
+## 🚀 Exécution du projet  
+
+### 1️⃣ Installation des dépendance
+
+pip install -r requirements.txt
+
+### 2️⃣  Lancer le système
+
+python ecg.py
+
+---
+## 🔄 Fonctionnalités du script 
+
+-Lecture des données ECG à partir du capteur AD8232
+
+-Prétraitement du signal (normalisation, segmentation)
+
+-Exécution du modèle TensorFlow Lite pour la classification
+
+-Publication sécurisée des résultats vers ThingsBoard via MQTT
+
+ ---
+ ## 🔐  Sécurité 
+
+
+-Communication MQTT chiffrée (TLS)
+
+-Authentification par Access Token
+
+-Traitement local des données sensibles (Edge Computing)
+
+
+ ---
+ 
+
+
 
