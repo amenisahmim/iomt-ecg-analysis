@@ -97,7 +97,7 @@ Le modèle est entraîné hors ligne puis converti au format TensorFlow Lite pou
 
 La communication est assurée via MQTT sécurisé (TLS) avec authentification par Access Token.
 
-![Tableau de bord ThingsBoard](docs/dashboard_thingsboard.png)
+![Tableau de bord ThingsBoard](docs/Capture d'écran 2025-12-13 1957128888.png)
 
 ---
 
